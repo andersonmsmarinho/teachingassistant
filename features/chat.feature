@@ -3,7 +3,7 @@ Funcionalidade: Assistente de Ensino (Chat)
   Eu quero interagir com o chat do assistente de ensino
   Para tirar dúvidas sobre o conteúdo das aulas de forma rápida e contextualizada
 
-  Cenário: Enviar uma dúvida acadêmica com resposta contextualizada
+  Cenário: Enviar uma dúvida com resposta contextualizada
     Dado que o estudante está autenticado na plataforma
     E acessou o módulo da disciplina de "Engenharia de Software"
     Quando ele digita a mensagem "O que é um requisito não funcional?" no campo de chat
