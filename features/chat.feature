@@ -12,7 +12,7 @@ Funcionalidade: Assistente de Ensino (Chat)
     E o assistente deve responder com a definição e exemplos de requisitos não funcionais
     E o tempo de resposta deve ser inferior a 5 segundos
 
-  Cenário: Tentar enviar uma mensagem em branco
+  Cenário: Tentar enviar uma mensagem vazia
     Dado que o estudante está com a janela do chat aberta
     Quando ele tenta enviar o formulário com o campo de texto vazio
     Então o sistema não deve registrar o envio da mensagem
