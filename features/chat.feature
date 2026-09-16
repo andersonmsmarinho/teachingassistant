@@ -18,3 +18,4 @@ Funcionalidade: Assistente de Ensino (Chat)
     Então o sistema não deve registrar o envio da mensagem
     E deve exibir uma indicação visual de que o campo não pode estar em branco
     E o foco do cursor deve permanecer no campo de entrada
+    E a página deve corresponder aos padrões de acessibilidade
