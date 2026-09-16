@@ -26,3 +26,12 @@ Funcionalidade: Assistente de Ensino (Chat)
     Então o assistente deve cessar a geração de texto imediatamente
     E a mensagem parcial gerada até aquele instante deve permanecer visível no histórico
     E o campo de entrada de texto deve ser reabilitado para novas mensagens
+
+  Cenário: Falha de conexão durante o envio de uma dúvida
+    Dado que o estudante está autenticado e com o chat aberto
+    E a conexão com a internet foi interrompida
+    Quando ele envia a mensagem "Como funciona o polimorfismo?"
+    Então o sistema deve manter a mensagem visível no histórico com um ícone de status de erro
+    E deve exibir a notificação "Não foi possível conectar ao servidor. Verifique sua conexão."
+    E deve disponibilizar a opção "Tentar novamente" junto à mensagem com falha
+    E o texto original não deve ser perdido
