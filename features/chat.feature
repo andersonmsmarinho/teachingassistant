@@ -37,3 +37,12 @@ Funcionalidade: Assistente de Ensino (Chat)
     E deve disponibilizar a opção "Tentar novamente" junto à mensagem com falha
     E o texto original não deve ser perdido
     E ...
+    Quando ...
+
+Cenário: Avaliar a utilidade da resposta gerada pelo assistente
+    Dado que o assistente concluiu a geração da resposta para uma dúvida
+    Quando o estudante clica no ícone de "Não foi útil" (polegar para baixo)
+    Então o sistema deve exibir um menu contextual opcional com opções de motivo ("Incorreta", "Confusa", "Fora do contexto da aula")
+    E deve registrar o feedback de qualidade vinculado ao ID da mensagem
+    E deve exibir uma confirmação sutil de agradecimento pelo feedback
+    E a mensagem original deve permanecer inalterada no histórico
