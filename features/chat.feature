@@ -37,6 +37,7 @@ Funcionalidade: Assistente de Ensino (Chat)
     E deve disponibilizar a opção "Tentar novamente" junto à mensagem com falha
     E o texto original não deve ser perdido
     E ...
+<<<<<<< HEAD
     Quando ...
 
 Cenário: Avaliar a utilidade da resposta gerada pelo assistente
@@ -46,3 +47,6 @@ Cenário: Avaliar a utilidade da resposta gerada pelo assistente
     E deve registrar o feedback de qualidade vinculado ao ID da mensagem
     E deve exibir uma confirmação sutil de agradecimento pelo feedback
     E a mensagem original deve permanecer inalterada no histórico
+=======
+    Quando ...
+>>>>>>> f35646bb97afb9194c95fd47c21956135dacce38
