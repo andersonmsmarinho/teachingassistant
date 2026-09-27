@@ -27,11 +27,12 @@ Funcionalidade: Assistente de Ensino (Chat)
     E a mensagem parcial gerada até aquele instante deve permanecer visível no histórico
     E o campo de entrada de texto deve ser reabilitado para novas mensagens
 
-  Cenário: Falha de conexão durante o envio de uma dúvida
+  Cenário: Envio offline de dúvida com sincronização automática em segundo plano
     Dado que o estudante está autenticado e com o chat aberto
-    E a conexão com a internet foi interrompida
+    E o dispositivo perdeu o acesso à internet
     Quando ele envia a mensagem "Como funciona o polimorfismo?"
-    Então o sistema deve manter a mensagem visível no histórico com um ícone de status de erro
-    E deve exibir a notificação "Não foi possível conectar ao servidor. Verifique sua conexão."
-    E deve disponibilizar a opção "Tentar novamente" junto à mensagem com falha
-    E o texto original não deve ser perdido
+    Então o sistema deve registrar a mensagem em uma fila local (outbox) e exibi-la imediatamente com o status "Aguardando conexão"
+    E o campo de digitação deve permanecer liberado para novas mensagens
+    E quando a conectividade for restabelecida
+    Então o sistema deve disparar o reenvio automático da fila na ordem cronológica
+    E atualizar o status para "Entregue" sem exigir intervenção manual do estudante
