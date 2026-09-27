@@ -37,3 +37,4 @@ Funcionalidade: Assistente de Ensino (Chat)
     E quando a conectividade for restabelecida
     Então o sistema deve disparar o reenvio automático da fila na ordem cronológica
     E atualizar o status para "Entregue" sem exigir intervenção manual do estudante
+    E +++
